@@ -25,7 +25,8 @@ defined( 'ABSPATH' ) or die();
 foreach ( array( 'plugin', 'mexp', 'service', 'template', 'response' ) as $class )
 	require_once sprintf( '%s/class.%s.php', dirname( __FILE__ ), $class );
 
-foreach ( glob( dirname( __FILE__ ) . '/services/*/service.php' ) as $service )
-	include $service;
+// We dont need to use these services at the moment
+//foreach ( glob( dirname( __FILE__ ) . '/services/*/service.php' ) as $service )
+//	include $service;
 
 Media_Explorer::init( __FILE__ );
